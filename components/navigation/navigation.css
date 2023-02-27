@@ -1,0 +1,55 @@
+@import url("../../index.css");
+
+@keyframes visible-menu {
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navigation-item:not(:first-child)>.link-btn:hover:after {
+    width: calc(100% - 30px);
+}
+
+.link-btn {
+    margin: 0 23px;
+}
+
+.link-btn:hover>svg {
+    transform: rotate(180deg) translateY(-3px);
+}
+
+.menu-icon {
+	margin: 0 6px;
+	color: var(--color-green);
+}
+
+.menu-wrapper {
+    position: absolute;
+    visibility: hidden;
+    top: -30px;
+    right: 0;
+    z-index: 100;
+
+    width: 100%;
+    margin-top: 80px;
+}
+
+.navigation-item:hover>.menu-wrapper, .menu-wrapper:hover {
+    visibility: visible;
+
+    animation: visible-menu .4s ease;
+}
+
+li > a {
+    color: var(--color-dark-blue);
+}
+
+@media screen and (max-width: 1366px) {
+    
+    .link-btn {
+        margin: 0 12px;
+    }
+}

@@ -1,0 +1,45 @@
+@import url("../../index.css");
+
+.logo {
+    width: 160px;
+    height: 48px;
+    object-fit: contain;
+}
+
+li {
+    margin: 0 23px;
+}
+
+.menu-button {
+    border: none;
+
+    background-color: transparent;
+}
+
+.bi-list, .bi-search, .bi-x-lg {
+    font-size: 24px;
+    color: var(--color-dark-blue);
+}
+
+@media (max-width: 1366px) {
+
+    li {
+        margin: 0 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    li, .menu-button {
+        margin: unset;
+        padding: unset;
+    }
+    .logo {
+        width: 102px;
+        height: 30px;
+    }
+
+    .bi-search {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,227 @@
+@import url("../../index.css");
+
+.hero-section {
+    padding: 140px 130px;
+    padding-bottom: unset;
+
+    background-image: url("https://www.midcapfinancial.com/wp-content/uploads/2022/10/home-hero-scaled.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subhero-section {
+    padding: 0px 130px;
+}
+
+.hero-container {
+    min-height: 640px;
+}
+
+.hero-container>div {
+    width: 700px;
+}
+
+.hero-content {
+    position: relative;
+
+    width: 100%;
+    padding: 71px 100px 61px 70px;
+}
+
+.hero-content::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 105px;
+    height: 105px;
+    content: "";
+
+    background-color: var(--color-green);
+    
+    opacity: .9;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%, 65% 35%, 0 35%);
+}
+
+.hero-content::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 51px;
+    height: 51px;
+    content: "";
+
+    background-color: var(--color-dark-blue);
+    
+    opacity: .9;
+    clip-path: polygon(35% 0, 35% 65%, 100% 65%, 100% 100%, 0 100%, 0 0);
+}
+
+.hero-content > h1 {
+    margin: unset;
+    
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.statistics-section {
+    top: -70px;
+
+    width: 100%;
+
+    background-color: var(--color-dark-gray);
+}
+
+.statistics-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.statistics-card {
+    padding: 53px 10px;
+}
+
+.statistics-title {
+    width: 100%;
+    
+    text-align: center;
+}
+
+.statistics-title span {
+    margin-right: 5px;
+
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.statistics-title>span:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    background-color: var(--color-green);
+    content: "";
+    
+    transition: .3s;
+}
+
+.statistics-title:hover>span:after {
+    width: 98%;
+}
+
+.statistics-value {
+    margin-bottom: 15px;
+    color: #FFFF;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+@media screen and (max-width: 1366px) {
+
+    .hero-section {
+        padding: 140px 60px;
+        padding-bottom: unset;
+    }
+
+    .subhero-section {
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .hero-content {
+        padding: 35px 50px 30px 35px;
+    }
+
+    .hero-container {
+        min-height: 520px;
+    }
+
+    .statistics-card {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    
+    .statistics-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 80px 15px 0px 15px;
+
+        background-image: url("https://www.midcapfinancial.com/wp-content/uploads/2022/10/home-hero-mobile.jpg");
+    }
+
+    .hero-container {
+        min-height: 360px;
+    }
+    
+    .hero-container>div {
+        width: 290px;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .hero-content::before {
+        width: 56px;
+        height: 56px;
+    }
+
+    .hero-content::after {
+        width: 23px;
+        height: 23px;
+    }
+
+    .hero-content > h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .subhero-section {
+        padding: 0px 15px 0px 15px;
+    }
+
+    .statistics-container {
+        grid-template-columns: unset;
+
+        padding: 30px 0;
+    }
+
+    .statistics-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0px 15px 25px 15px;
+    }
+
+    .statistics-card:last-child {
+
+        padding: 0px 15px;
+    }
+
+    .statistics-value {
+        margin-bottom: unset;
+
+        font-size: 50px;
+    }
+    
+    .statistics-title > span {
+        font-size: 16px;
+    }
+}

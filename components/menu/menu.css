@@ -1,0 +1,127 @@
+@import url("../../index.css");
+
+@keyframes visible-menu {
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    min-height: 200px;
+}
+
+.container > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container>div:nth-child(1) {
+    align-items: flex-end;
+
+    padding: 45px 90px 10px 10px;
+    border-right: 1px solid #3042524D;
+}
+
+.container>div:nth-child(2) {
+    padding: 0px 10px 10px 90px;
+}
+
+.container>div:nth-child(3) {
+    padding: 45px 10px 10px 0px;
+}
+
+.menu-section {
+    margin-top: 30px;
+    padding: 45px 0;
+
+    background-color: #EDF3F5;
+}
+
+.menu-title {
+    margin-bottom: 20px;
+}
+
+.menu-title > p {
+    margin: unset;
+
+    font-weight: 700;
+    color: var(--color-green);
+    text-transform: uppercase;
+}
+
+li > a {
+    color: var(--color-dark-blue);
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.links-list>* {
+    text-transform: capitalize;
+}
+
+.left-options > a {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-section {
+        margin: unset;
+        padding: 15px 15px 15px 15px;
+    }
+
+    .container>div:nth-child(1) {
+        align-items: center;
+
+        padding: 45px 10px 0px 10px;
+        border-right: unset;
+    }
+
+    .container>div:nth-child(2) {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: unset;
+    }
+
+    .links-list {
+        padding: 0px 20px;
+    }
+
+    .left-list {
+        padding: unset;
+    }
+
+    .container>div:nth-child(1) {
+        align-items: flex-start;
+
+        padding: 0px 30px 15px 30px;
+        border-bottom: 1px solid #3042524D;
+    }
+
+    .container>div:nth-child(4) {
+        padding: 15px 30px 15px 30px;
+    }
+
+    .left-options > a > br {
+        display: none;
+    }
+}

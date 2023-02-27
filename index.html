@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.investorsbank.com//sites/default/files/favicons/favicon-16x16.png">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+  <head>
+    <title>MidCap Financial: Specialty Finance - Direct Lending</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="At MidCap Financial, we provide specialty finance and direct lending solutions to businesses across a variety of industries. We're problem-solvers who are committed to helping our clients achieve their goals."
+    />
+    <link
+      rel="icon"
+      href="https://www.midcapfinancial.com/wp-content/uploads/2022/09/cropped-ms-icon-150x150-1-32x32.png"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script src="components/footer/footer.js"></script>
     <script src="components/header/header.js"></script>
-    <title>Business Banking Solutions for New Jersey & New York | Investors Bank</title>
-</head>
-<body>
+    <script src="components/hero/hero.js"></script>
+    <script src="components/menu/menu.js"></script>
+    <script src="components/navigation/navigation.js"></script>
+    <script src="components/navigationDrawer/navigationDrawer.js"></script>
+    <script src="components/transactions/transactions.js"></script>
+  </head>
+  <body>
     <div id="page-container">
-        <header-component></header-component>
+      <header id="header">
+        <header-component />
+      </header>
+      <main>
+        <section>
+          <hero-component />
+        </section>
+        <section>
+          <transactions-component />
+        </section>
+      </main>
+      <footer>
+        <footer-component />
+      </footer>
     </div>
-</body>
+  </body>
 </html>
